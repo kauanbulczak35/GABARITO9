@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Code - Ninja vs Detetive</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.5.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.5.1/core.js"></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="cabecalho">
+            <h1>Ninja vs Detetive</h1>
+            <p class="descricao">
+                Colete as moedas e fuja do detetive!
+            </p>
+        </header>
+
+        <section class="painel">
+
+            <div class="status">
+                <span>🏆 Pontos</span>
+                <strong id="placar">0</strong>
+            </div>
+
+            <div class="status">
+                <span>❤️ Vidas</span>
+                <strong id="vidas">3</strong>
+            </div>
+
+            <div class="status">
+                <span>⏱️ Tempo</span>
+                <strong id="tempo">60</strong>
+            </div>
+
+            <div class="status">
+                <span>🎯 Fase</span>
+                <strong id="fase">1</strong>
+            </div>
+
+        </section>
+
+        <section class="area-jogo">
+
+            <div class="titulo-area">
+                <span>ÁREA DE MISSÃO</span>
+            </div>
+
+            <div id="jogo">
+
+                <div class="detalhe-cenario"></div>
+
+                <div id="jogador">🥷</div>
+
+                <div id="moeda">💰</div>
+
+                <div id="inimigo">🕵️‍♂️</div>
+
+            </div>
+
+            <p id="mensagem">
+                Colete as moedas antes que o tempo acabe!
+            </p>
+
+        </section>
+
+        <section class="instrucoes">
+            <h2>Como jogar</h2>
+            <p>Use as <strong>setas do teclado</strong> para movimentar o ninja.</p>
+            <p>Recolha as moedas, evite o detetive e avance pelas fases.</p>
+        </section>
+
+        <footer>
+            <p>Game Code — Projeto desenvolvido em aula</p>
+        </footer>
+
+    </main>
+
+    <audio id="somMoeda" src="sons/moeda.wav" preload="auto"></audio>
+    <audio id="somColisao" src="sons/colisao.wav" preload="auto"></audio>
+
+    <script type="py" src="jogo.py"></script>
+
+</body>
+</html>
